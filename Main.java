@@ -12,8 +12,27 @@ class Main {
     String car1 = scan.next();
     System.out.println("What is the model of your car?");
     String make1 = scan.next();
-    System.out.println("How many 'miles per gallon' does your car get?");
-    int mpg1 = scan.nextInt();
+    //Using boolean to determine if vehicle is electric or not
+    System.out.println("True or False. You'r vehicle is electric.");
+    boolean electricCar = scan.nextBoolean();
+    
 
-  }
+    if (electricCar == true)
+    {
+      System.out.println("Congratulaions! Your vehicle is enviromently freindly and greatly reduces the carbon footprint in you area. " + "Also, thank you for driving a " + year1 + " " + car1 + " " + make1 + ".");
+    }else{
+    System.out.println("Since, you do drive a gas-powered vehicle.");
+    }
+
+    System.out.println("If you do have an electric vehicle, DO NOT answer the question below.");
+    System.out.println("How many 'miles per gallon' does your car get?");
+      int mpg1 = scan.nextInt();
+
+    if (mpg1 > 30)
+    {
+      System.out.println(" Congratulations! You drive a " + year1 + " " + car1 + " " + make1 + " which is considered enviromently friendly as it gets " + mpg1 + " 'miles per gallon' which decreases the carbon footprint in your area!");
+    }else{
+      System.out.println(" However, you drive a " + year1 + " " + car1 + " " + make1 + " which is NOT considered enviromently friendly as it gets" + mpg1 + " 'miles per gallon' which is under the recommended fuel efficiency rate which increases the carbon footprint in your area.");
+    }
+}
 }
